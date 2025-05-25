@@ -1,0 +1,51 @@
+# Google Firebase
+.firebase
+.firebaserc
+firebase
+firebase.json
+service-account.json
+apphosting.emulator.yaml
+firebase/generated_scripts/importData.cjs
+firebase/generated_scripts/importAuthUsers.cjs
+
+# Appwrite
+
+
+# Node dependencies
+node_modules
+
+# Misc
+.DS_Store
+.fleet
+
+# Logs
+logs
+*.log
+**/*.log
+
+# Nuxt dev/build/generate/postinstall outputs
+.output
+.nuxt
+.nitro
+.cache
+dist
+
+# Temporary exclude to ensure that private data does not pollute the Git repository.
+nuxt.config.ts
+
+# Development & data
+.data
+data
+.development
+development
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Jetbrains IDE
+.idea
+qodana.yaml
+
+# VSCode

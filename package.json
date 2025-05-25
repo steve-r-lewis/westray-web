@@ -1,0 +1,79 @@
+{
+  "name": "web-app-v01",
+  "description": "Westray community web application. An eCommerce, business and social platform for the Orcadian island of Westray",
+  "private": true,
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steve-r-lewis/westray-uk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/steve-r-lewis/westray-uk/issues"
+  },
+  "authors": [
+    {
+      "name": "Steve R Lewis",
+      "email": "me@steve-lewis.uk",
+      "url": "https://www.steve-lewis.uk"
+    }
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "patreon.com/TheModuleFactory"
+  },
+  "keywords": [
+    "westray",
+    "development",
+    "community",
+    "ecommerce",
+    "vue",
+    "nuxt",
+    "firebase"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "echo 'No test specified' && exit 1",
+    "fbase-emulators": "firebase emulators:start --import .data/firebase_emulators --export-on-exit"
+  },
+  "dependencies": {
+    "@firebase/app-types": "^0.9.3",
+    "@iconify/vue": "^5.0.0",
+    "@nuxt/icon": "^1.13.0",
+    "@nuxtjs/seo": "^3.0.3",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@pinia/nuxt": "^0.11.0",
+    "date-fns": "^4.1.0",
+    "firebase": "^11.8.1",
+    "firebase-admin": "^13.4.0",
+    "firebase-functions": "^6.3.2",
+    "nuxt": "^3.17.3",
+    "pinia": "^3.0.2",
+    "pinia-plugin-persistedstate": "^4.2.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.7.0",
+    "@nuxt/eslint": "^1.4.0",
+    "@nuxt/types": "^2.18.1",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^22.15.21",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.27.0",
+    "tailwind-scrollbar-hide": "^2.0.0",
+    "typescript": "^5.8.3",
+    "vite-plugin-compression": "^0.5.1"
+  }
+}
