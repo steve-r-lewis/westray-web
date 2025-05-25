@@ -7,10 +7,10 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/steve-r-lewis/westray-uk.git"
+    "url": "https://github.com/steve-r-lewis/westray-web.git"
   },
   "bugs": {
-    "url": "https://github.com/steve-r-lewis/westray-uk/issues"
+    "url": "https://github.com/steve-r-lewis/westray-web/issues"
   },
   "authors": [
     {
