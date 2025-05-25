@@ -1,0 +1,91 @@
+/* ~/assets/css/themes.css */
+
+/* Overrides for Spring (Dark Mode) */
+/* Spring Light is the default for generic light variables in tokens.css */
+html.theme-spring.dark {
+	--color-primary: var(--spring-dark-primary);
+	--color-secondary-dark: var(--spring-dark-secondary);
+	--color-background-dark: var(--spring-dark-background);
+	--color-text-dark: var(--spring-dark-text);
+	--color-surface-highlight-dark: var(--spring-dark-surface-highlight);
+	--color-secondary-background-dark: var(--spring-dark-secondary-background);
+	--color-distinct-background-dark: var(--spring-dark-distinct-background);
+	--color-background-image-dark: var(--spring-dark-background-image); /* ✨ New */
+}
+/* For Spring Light, the defaults in :root already point to spring-light, but if you wanted to be explicit: */
+html.theme-spring:not(.dark) {
+	--color-primary: var(--spring-light-primary);
+	--color-secondary-light: var(--spring-light-secondary);
+	--color-background-light: var(--spring-light-background);
+	--color-text-light: var(--spring-light-text);
+	--color-surface-highlight-light: var(--spring-light-surface-highlight);
+	--color-secondary-background-light: var(--spring-light-secondary-background);
+	--color-distinct-background-light: var(--spring-light-distinct-background);
+	--color-background-image-light: var(--spring-light-background-image); /* ✨ New */
+}
+
+/* Overrides for Summer */
+html.theme-summer:not(.dark) { /* Summer Light */
+	--color-primary: var(--summer-light-primary);
+	--color-secondary-light: var(--summer-light-secondary);
+	--color-background-light: var(--summer-light-background);
+	--color-text-light: var(--summer-light-text);
+	--color-surface-highlight-light: var(--summer-light-surface-highlight);
+	--color-secondary-background-light: var(--summer-light-secondary-background);
+	--color-distinct-background-light: var(--summer-light-distinct-background);
+	--color-background-image-light: var(--summer-light-background-image); /* ✨ New */
+}
+html.theme-summer.dark { /* Summer Dark */
+	--color-primary: var(--summer-dark-primary);
+	--color-secondary-dark: var(--summer-dark-secondary);
+	--color-background-dark: var(--summer-dark-background);
+	--color-text-dark: var(--summer-dark-text);
+	--color-surface-highlight-dark: var(--summer-dark-surface-highlight);
+	--color-secondary-background-dark: var(--summer-dark-secondary-background);
+	--color-distinct-background-dark: var(--summer-dark-distinct-background);
+	--color-background-image-dark: var(--summer-dark-background-image); /* ✨ New */
+}
+
+/* Overrides for Autumn */
+html.theme-autumn:not(.dark) { /* Autumn Light */
+	--color-primary: var(--autumn-light-primary);
+	--color-secondary-light: var(--autumn-light-secondary);
+	--color-background-light: var(--autumn-light-background);
+	--color-text-light: var(--autumn-light-text);
+	--color-surface-highlight-light: var(--autumn-light-surface-highlight);
+	--color-secondary-background-light: var(--autumn-light-secondary-background);
+	--color-distinct-background-light: var(--autumn-light-distinct-background);
+	--color-background-image-light: var(--autumn-light-background-image); /* ✨ New */
+}
+html.theme-autumn.dark { /* Autumn Dark */
+	--color-primary: var(--autumn-dark-primary);
+	--color-secondary-dark: var(--autumn-dark-secondary);
+	--color-background-dark: var(--autumn-dark-background);
+	--color-text-dark: var(--autumn-dark-text);
+	--color-surface-highlight-dark: var(--autumn-dark-surface-highlight);
+	--color-secondary-background-dark: var(--autumn-dark-secondary-background);
+	--color-distinct-background-dark: var(--autumn-dark-distinct-background);
+	--color-background-image-dark: var(--autumn-dark-background-image); /* ✨ New */
+}
+
+/* Overrides for Winter */
+html.theme-winter:not(.dark) { /* Winter Light */
+	--color-primary: var(--winter-light-primary);
+	--color-secondary-light: var(--winter-light-secondary);
+	--color-background-light: var(--winter-light-background);
+	--color-text-light: var(--winter-light-text);
+	--color-surface-highlight-light: var(--winter-light-surface-highlight);
+	--color-secondary-background-light: var(--winter-light-secondary-background);
+	--color-distinct-background-light: var(--winter-light-distinct-background);
+	--color-background-image-light: var(--winter-light-background-image); /* ✨ New */
+}
+html.theme-winter.dark { /* Winter Dark */
+	--color-primary: var(--winter-dark-primary);
+	--color-secondary-dark: var(--winter-dark-secondary);
+	--color-background-dark: var(--winter-dark-background);
+	--color-text-dark: var(--winter-dark-text);
+	--color-surface-highlight-dark: var(--winter-dark-surface-highlight);
+	--color-secondary-background-dark: var(--winter-dark-secondary-background);
+	--color-distinct-background-dark: var(--winter-dark-distinct-background);
+	--color-background-image-dark: var(--winter-dark-background-image); /* ✨ New */
+}

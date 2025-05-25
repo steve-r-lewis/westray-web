@@ -1,0 +1,108 @@
+/* ~/assets/css/components.css */
+/* This file houses your custom component styles. */
+/* These styles should use the semantic application tokens (e.g., var(--app-accent)) */
+/* so they adapt to theme and mode changes automatically. */
+
+@layer components {
+	/* Navigation Buttons */
+	.btn-nav {
+		@apply px-4 py-2 rounded-md font-semibold transition-colors duration-200 ease-in-out;
+		@apply bg-[var(--app-accent)] text-white; /* Uses main accent color */
+	}
+	.btn-nav:hover {
+		filter: brightness(110%); /* Slightly lighten on hover */
+	}
+	html.dark .btn-nav:hover {
+		filter: brightness(120%); /* Adjust brightness for dark mode if needed */
+	}
+	
+	.btn-nav-outline {
+		@apply px-4 py-2 rounded-md font-semibold border-2 transition-colors duration-200 ease-in-out;
+		@apply border-[var(--app-accent)] text-[var(--app-accent)];
+	}
+	.btn-nav-outline:hover {
+		@apply bg-[var(--app-accent)] text-white;
+	}
+	
+	/* Generic Card Style */
+	.card {
+		@apply rounded-lg shadow-lg overflow-hidden transition-colors duration-300 ease-in-out;
+		@apply bg-[var(--app-surface-bg)] border border-[var(--app-border)];
+	}
+	.card-header {
+		@apply p-4 border-b border-[var(--app-border)];
+		/* Optionally, use a highlight or accent for card headers */
+		/* background-color: var(--app-highlight); */
+	}
+	.card-body {
+		@apply p-4;
+	}
+	.card-footer {
+		@apply p-4 border-t border-[var(--app-border)] bg-opacity-50;
+		/* A subtle way to differentiate footer background, using color-mix if supported widely enough, or a semi-transparent overlay */
+		background-color: color-mix(in srgb, var(--app-surface-bg) 90%, var(--app-border));
+	}
+	
+	/* Slider Gallery Card (can extend generic card or be specific) */
+	.card-slider-gallery {
+		@apply card; /* Inherits base card styles */
+	}
+	.card-slider-gallery img {
+		@apply object-cover w-full h-48; /* Example height, adjust as needed */
+	}
+	
+	/* Shopping Gallery Card */
+	.card-shop-item {
+		@apply card text-center; /* Inherits base card styles */
+	}
+	.card-shop-item .item-price {
+		@apply block text-lg font-semibold text-[var(--app-accent)] my-2;
+	}
+	.card-shop-item .btn-add-to-cart {
+		@apply btn-nav mt-2; /* Re-use nav button style */
+	}
+	
+	/* User Profile Dashboard Panel */
+	.dashboard-panel {
+		@apply card mb-6; /* Re-use card, add margin */
+	}
+	.dashboard-panel-title {
+		@apply text-xl font-semibold text-[var(--app-text-primary)] mb-1;
+	}
+	.dashboard-panel-subtitle {
+		@apply text-sm text-[var(--app-text-secondary)] mb-3;
+	}
+	.dashboard-form-group {
+		@apply mb-4;
+	}
+	.dashboard-label {
+		@apply block text-sm font-medium text-[var(--app-text-secondary)] mb-1;
+	}
+	.dashboard-input {
+		@apply block w-full px-3 py-2 rounded-md shadow-sm sm:text-sm transition-colors duration-200 ease-in-out;
+		@apply bg-[var(--app-body-bg)] border border-[var(--app-border)] text-[var(--app-text-primary)];
+		@apply focus:ring-1 focus:ring-[var(--app-accent)] focus:border-[var(--app-accent)];
+	}
+	.dashboard-button {
+		@apply btn-nav; /* Or a specific dashboard button style */
+	}
+	
+	/* Alerts using semantic colors */
+	.alert {
+		@apply p-4 rounded-md text-white; /* Base alert styling */
+	}
+	.alert-success {
+		@apply alert bg-[var(--app-success)];
+	}
+	.alert-warning {
+		@apply alert bg-[var(--app-warning)];
+		/* Warning text might need to be dark for better contrast on some orange shades */
+		/* color: var(--app-text-primary); */
+	}
+	.alert-error {
+		@apply alert bg-[var(--app-error)];
+	}
+	.alert-info {
+		@apply alert bg-[var(--app-info)];
+	}
+}

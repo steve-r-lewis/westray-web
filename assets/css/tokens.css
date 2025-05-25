@@ -1,0 +1,131 @@
+/* ~/assets/css/tokens.css */
+
+/* Define all theme-specific color palettes and background images first */
+:root {
+	/* --- Spring Palettes & Backgrounds --- */
+	--spring-light-primary: #86efac;
+	--spring-light-secondary: #34d399;
+	--spring-light-background: #f0fdf4;
+	--spring-light-text: #14532d;
+	--spring-light-surface-highlight: #a7f3d0;
+	--spring-light-secondary-background: #d1fae5;
+	--spring-light-distinct-background: #e6fffa;
+	--spring-light-background-image: url('/assets/storage/backgrounds/spring-light.png'); /* ✨ New */
+	
+	--spring-dark-primary: #34d399;
+	--spring-dark-secondary: #6ee7b7;
+	--spring-dark-background: #064e3b;
+	--spring-dark-text: #ecfdf5;
+	--spring-dark-surface-highlight: #10b981;
+	--spring-dark-secondary-background: #047857;
+	--spring-dark-distinct-background: #023728;
+	--spring-dark-background-image: url('/assets/storage/backgrounds/spring-dark.png'); /* ✨ New */
+	
+	/* --- Summer Palettes & Backgrounds --- */
+	--summer-light-primary: #fdba74;
+	--summer-light-secondary: #fb923c;
+	--summer-light-background: #fff7ed;
+	--summer-light-text: #7c2d12;
+	--summer-light-surface-highlight: #fed7aa;
+	--summer-light-secondary-background: #ffedd5;
+	--summer-light-distinct-background: #fff4e6;
+	--summer-light-background-image: url('/assets/storage/backgrounds/summer-light.png'); /* ✨ New */
+	
+	--summer-dark-primary: #fb923c;
+	--summer-dark-secondary: #fdba74;
+	--summer-dark-background: #7c2d12;
+	--summer-dark-text: #fff7ed;
+	--summer-dark-surface-highlight: #f97316;
+	--summer-dark-secondary-background: #9a3412;
+	--summer-dark-distinct-background: #5a1e07;
+	--summer-dark-background-image: url('/assets/storage/backgrounds/summer-dark.png'); /* ✨ New */
+	
+	/* --- Autumn Palettes & Backgrounds --- */
+	--autumn-light-primary: #facc15;
+	--autumn-light-secondary: #eab308;
+	--autumn-light-background: #fefce8;
+	--autumn-light-text: #713f12;
+	--autumn-light-surface-highlight: #fde047;
+	--autumn-light-secondary-background: #fef9c3;
+	--autumn-light-distinct-background: #fffbe0;
+	--autumn-light-background-image: url('/assets/storage/backgrounds/autumn-light.png'); /* ✨ New */
+	
+	--autumn-dark-primary: #eab308;
+	--autumn-dark-secondary: #facc15;
+	--autumn-dark-background: #451a03;
+	--autumn-dark-text: #fefce8;
+	--autumn-dark-surface-highlight: #ca8a04;
+	--autumn-dark-secondary-background: #713f12;
+	--autumn-dark-distinct-background: #3b1201;
+	--autumn-dark-background-image: url('/assets/storage/backgrounds/autumn-dark.png'); /* ✨ New */
+	
+	/* --- Winter Palettes & Backgrounds --- */
+	--winter-light-primary: #7dd3fc;
+	--winter-light-secondary: #38bdf8;
+	--winter-light-background: #f0f9ff;
+	--winter-light-text: #075985;
+	--winter-light-surface-highlight: #bae6fd;
+	--winter-light-secondary-background: #e0f2fe;
+	--winter-light-distinct-background: #e6f7ff;
+	--winter-light-background-image: url('/assets/storage/backgrounds/winter-light.png'); /* ✨ New */
+	
+	--winter-dark-primary: #38bdf8;
+	--winter-dark-secondary: #7dd3fc;
+	--winter-dark-background: #0c4a6e;
+	--winter-dark-text: #f0f9ff;
+	--winter-dark-surface-highlight: #0ea5e9;
+	--winter-dark-secondary-background: #0369a1;
+	--winter-dark-distinct-background: #073352;
+	--winter-dark-background-image: url('/assets/storage/backgrounds/winter-dark.png'); /* ✨ New */
+	
+	/* === GENERIC PALETTE & BACKGROUND VARIABLES (Initialize with Spring Light values) === */
+	/* These are overridden by themes.css for the active theme */
+	--color-primary: var(--spring-light-primary);
+	--color-secondary-light: var(--spring-light-secondary);
+	--color-background-light: var(--spring-light-background);
+	--color-text-light: var(--spring-light-text);
+	--color-surface-highlight-light: var(--spring-light-surface-highlight);
+	--color-secondary-background-light: var(--spring-light-secondary-background);
+	--color-distinct-background-light: var(--spring-light-distinct-background);
+	--color-background-image-light: var(--spring-light-background-image); /* ✨ New */
+	
+	/* Generic Dark Palette & Background Variables (Initialize with Spring Dark values) */
+	/* These are also overridden by themes.css for the active theme's dark mode */
+	--color-secondary-dark: var(--spring-dark-secondary);
+	--color-background-dark: var(--spring-dark-background);
+	--color-text-dark: var(--spring-dark-text);
+	--color-surface-highlight-dark: var(--spring-dark-surface-highlight);
+	--color-secondary-background-dark: var(--spring-dark-secondary-background);
+	--color-distinct-background-dark: var(--spring-dark-distinct-background);
+	--color-background-image-dark: var(--spring-dark-background-image); /* ✨ New */
+	
+	/* === SEMANTIC APPLICATION TOKENS (Light Mode Defaults) === */
+	/* These are what your Tailwind config and components should primarily use. */
+	--app-body-bg: var(--color-background-light);
+	--app-surface-bg: var(--color-secondary-background-light);
+	--app-distinct-bg: var(--color-distinct-background-light);
+	--app-text-primary: var(--color-text-light);
+	--app-text-secondary: var(--color-secondary-light);
+	--app-accent: var(--color-primary);
+	--app-highlight: var(--color-surface-highlight-light);
+	--app-border: rgba(0, 0, 0, 0.1);
+	--app-background-image: var(--color-background-image-light); /* ✨ New */
+	
+	--app-success: #22c55e;
+	--app-warning: #f97316;
+	--app-error: #ef4444;
+	--app-info: #3b82f6;
+}
+
+/* === SEMANTIC APPLICATION TOKENS (Dark Mode Overrides) === */
+html.dark {
+	--app-body-bg: var(--color-background-dark);
+	--app-surface-bg: var(--color-secondary-background-dark);
+	--app-distinct-bg: var(--color-distinct-background-dark);
+	--app-text-primary: var(--color-text-dark);
+	--app-text-secondary: var(--color-secondary-dark);
+	/* --app-accent uses --color-primary, which is overridden by themes.css for the dark version of the current theme */
+	--app-highlight: var(--color-surface-highlight-dark);
+	--app-border: rgba(255, 255, 255, 0.1);
+	--app-background-image: var(--color-background-image-dark); /* ✨ New */
+}

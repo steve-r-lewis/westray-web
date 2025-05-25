@@ -1,0 +1,80 @@
+/* ~/assets/css/main.css */
+
+/* 1. Standard CSS @import rules MUST come first (except for @charset). */
+@import './tokens.css';    /* CSS variable definitions (defaults & semantic) */
+@import './themes.css';    /* Theme-specific variable overrides */
+@import './components.css';/* Custom component styles (which use @layer components) */
+
+/* 2. Tailwind directives: These come after standard imports. */
+/* Tailwind will process these and the imported files. */
+@tailwind base;
+@tailwind components; /* This establishes the 'components' layer that your components.css uses */
+@tailwind utilities;
+
+/* 3. Your custom base styles (can also be in a separate file and imported if large) */
+/* This @layer base block now correctly follows the @tailwind directives. */
+@layer base {
+	html {
+		@apply antialiased; /* Smooths out fonts */
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+		/* The class 'scrollbar-gutter-stable overflow-y-scroll' is applied via nuxt.config.ts */
+		/* to the <html> tag for consistent scrollbar behavior. */
+	}
+	
+	body {
+		/* Apply base background and text colors using semantic tokens defined in tailwind.config.ts */
+		@apply bg-app-body-bg text-app-text-primary transition-colors duration-300 ease-in-out;
+		min-height: 100vh; /* Ensure body takes at least full viewport height */
+	}
+	
+	a {
+		/* Style links with the application's accent color defined in tailwind.config.ts */
+		@apply text-app-accent transition-opacity duration-200 ease-in-out;
+	}
+	
+	a:hover {
+		filter: brightness(90%);
+	}
+	html.dark a:hover {
+		filter: brightness(120%);
+	}
+	
+	.content-wrapper {
+		@apply w-full mx-auto;
+		/* Responsive horizontal padding */
+		@apply px-4 sm:px-6 lg:px-8;
+		/* Responsive max-width.
+			 Assumes tailwind.config.ts screens for xl, xxl, and xxxl have been updated
+			 to appropriate values (e.g., xl: 1280px, xxl: 1536px, xxxl: 1920px).
+		*/
+		@apply max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-[1440px] xxxl:max-w-[1600px];
+	}
+	
+	/* Base class for all main layouts */
+	.layout-base {
+		@apply flex flex-col w-full min-h-screen; /* Common structural styles */
+		/* Common theming using semantic tokens defined in tailwind.config.ts */
+		@apply bg-app-surface-bg text-app-text-primary;
+		/* Responsive padding for the overall layout shell.
+			 Tailwind's default spacing scale is used here.
+		*/
+		@apply px-4 sm:px-6 lg:px-8 xl:px-10 xxl:px-12 xxxl:px-16;
+		@apply py-4 sm:py-6 lg:py-8 xl:py-10 xxl:py-10; /* Adjusted xxl vertical padding to match xl, can be py-12 if preferred */
+		@apply transition-colors duration-300 ease-in-out; /* Common transitions */
+	}
+	
+	.layout-default {
+		@apply layout-base; /* Apply all styles from .layout-base */
+	}
+	
+	.layout-dashboard {
+		@apply layout-base; /* Apply all styles from .layout-base */
+	}
+	
+	.layout-development {
+		@apply layout-base; /* Apply all styles from .layout-base */
+		/* Specific style for .layout-development using semantic token defined in tailwind.config.ts: */
+		@apply border-2 border-dashed border-app-warning;
+	}
+}
